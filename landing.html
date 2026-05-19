@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jawline Contouring - Jennifer Carly Aesthetic Medicine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Fahkwang:wght@400;600;700&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --sage:       #2A3119;
+      --cream:      #F2DDCB;
+      --light-bg:   #FAF3ED;
+      --accent:     #49C193;
+      --text:       #2A2A2A;
+      --text-light: #555555;
+      --teal-demo:  #00D4BC;
+      --demo-bg:    #0A2A28;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Mulish', sans-serif;
+      font-weight: 400;
+      color: var(--text);
+      background: var(--light-bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    h1, h2, h3, h4 {
+      font-family: 'Fahkwang', sans-serif;
+      line-height: 1.15;
+      color: var(--sage);
+    }
+
+    h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 400; }
+    h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 400; }
+    h3 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: 400; }
+    h4 { font-size: 1.05rem; font-weight: 400; }
+
+    p {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn-primary {
+      display: block;
+      background: var(--sage);
+      color: var(--cream);
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 40px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s ease;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      background: #1e2411;
+    }
+
+    .btn-cream {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--sage);
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 52px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s ease;
+      text-align: center;
+    }
+
+    .btn-cream:hover {
+      background: #e8ccb4;
+    }
+
+    /* ─── LAYOUT HELPERS ───────────────────────────────────────── */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ─── 1. DEMO BANNER ───────────────────────────────────────── */
+    .demo-banner {
+      background: var(--demo-bg);
+      color: var(--teal-demo);
+      text-align: center;
+      padding: 10px 24px;
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ─── 2. STICKY NAV ────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--sage);
+      padding: 20px 32px;
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Sacramento', cursive;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-logo span {
+      font-family: 'Fahkwang', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      display: block;
+      margin-top: -2px;
+    }
+
+    .nav-cta {
+      background: var(--cream);
+      color: var(--sage);
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: #e8ccb4;
+    }
+
+    /* ─── 3. HERO ──────────────────────────────────────────────── */
+    .hero {
+      background: var(--light-bg);
+      padding: 80px 0 0;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .hero-left {
+      padding-top: 32px;
+      padding-bottom: 96px;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 22px;
+    }
+
+    .hero-headline {
+      font-family: 'Fahkwang', sans-serif;
+      font-size: clamp(2.6rem, 4.5vw, 4rem);
+      font-weight: 400;
+      color: var(--sage);
+      line-height: 1.06;
+      margin-bottom: 28px;
+    }
+
+    .hero-subheadline {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-light);
+      line-height: 1.82;
+      margin-bottom: 24px;
+      max-width: 520px;
+    }
+
+    .hero-whisper {
+      font-style: italic;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--sage);
+      opacity: 0.75;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    /* Hero right: offer card */
+    .hero-right {
+      background: white;
+      box-shadow: 0 6px 48px rgba(42, 49, 25, 0.1);
+    }
+
+    .hero-image-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-image-wrap:hover img {
+      transform: scale(1.025);
+    }
+
+    .offer-card {
+      padding: 32px 32px 36px;
+    }
+
+    .offer-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      margin-bottom: 18px;
+    }
+
+    .offer-treatment {
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+
+    .offer-price {
+      font-family: 'Fahkwang', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--sage);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .offer-was {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-bottom: 26px;
+    }
+
+    .offer-note {
+      font-style: italic;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--text-light);
+      margin-top: 14px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    /* ─── 4. RESULTS GALLERY ───────────────────────────────────── */
+    .results {
+      background: var(--sage);
+      padding: 88px 0;
+    }
+
+    .results-label {
+      text-align: center;
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(242, 221, 203, 0.45);
+      margin-bottom: 12px;
+    }
+
+    .results h2 {
+      color: var(--cream);
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .result-item {
+      overflow: hidden;
+    }
+
+    .result-img-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+
+    .result-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s ease;
+    }
+
+    .result-item:hover .result-img-wrap img {
+      transform: scale(1.03);
+    }
+
+    .result-caption {
+      padding: 16px 0 4px;
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(242, 221, 203, 0.65);
+      text-align: center;
+    }
+
+    .results-disclaimer {
+      text-align: center;
+      margin-top: 44px;
+      font-size: 0.78rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(242, 221, 203, 0.35);
+    }
+
+    /* ─── 5. PAIN POINTS ───────────────────────────────────────── */
+    .pain {
+      background: var(--light-bg);
+      padding: 100px 0;
+    }
+
+    .pain-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 88px;
+      align-items: start;
+    }
+
+    .pain-eyebrow {
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .pain h2 {
+      margin-bottom: 48px;
+    }
+
+    .pain-item {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(42, 49, 25, 0.1);
+    }
+
+    .pain-item:first-of-type {
+      border-top: 1px solid rgba(42, 49, 25, 0.1);
+    }
+
+    .pain-item h4 {
+      font-family: 'Fahkwang', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--sage);
+      margin-bottom: 10px;
+    }
+
+    .pain-item p {
+      font-size: 0.96rem;
+      line-height: 1.78;
+    }
+
+    .pain-image-wrap {
+      position: sticky;
+      top: 100px;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+    }
+
+    .pain-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    /* ─── 6. MID CTA ───────────────────────────────────────────── */
+    .mid-cta {
+      background: var(--sage);
+      padding: 88px 32px;
+      text-align: center;
+    }
+
+    .mid-cta h2 {
+      color: var(--cream);
+      margin-bottom: 36px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ─── 7. HOW IT WORKS ──────────────────────────────────────── */
+    .how {
+      background: var(--light-bg);
+      padding: 100px 0;
+    }
+
+    .how-eyebrow {
+      text-align: center;
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .how h2 {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .step {
+      padding: 40px 36px;
+      border-left: 1px solid rgba(42, 49, 25, 0.1);
+    }
+
+    .step:first-child {
+      border-left: none;
+    }
+
+    .step-number {
+      font-family: 'Fahkwang', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-family: 'Fahkwang', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--sage);
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 0.93rem;
+      line-height: 1.75;
+    }
+
+    /* ─── 8. TESTIMONIAL ───────────────────────────────────────── */
+    .testimonial {
+      background: var(--cream);
+      overflow: hidden;
+    }
+
+    .testimonial-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 440px 1fr;
+      min-height: 540px;
+    }
+
+    .testimonial-image {
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .testimonial-content {
+      padding: 80px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .stars {
+      font-size: 1.3rem;
+      color: var(--sage);
+      letter-spacing: 0.06em;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-quote {
+      font-family: 'Fahkwang', sans-serif;
+      font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+      font-weight: 400;
+      color: var(--sage);
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    .testimonial-author {
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    /* ─── 9. FAQ ───────────────────────────────────────────────── */
+    .faq {
+      background: var(--light-bg);
+      padding: 100px 0;
+    }
+
+    .faq-eyebrow {
+      text-align: center;
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(42, 49, 25, 0.11);
+      padding: 30px 0;
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid rgba(42, 49, 25, 0.11);
+    }
+
+    .faq-q {
+      font-family: 'Fahkwang', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--sage);
+      margin-bottom: 10px;
+    }
+
+    .faq-a {
+      font-size: 0.97rem;
+      font-weight: 300;
+      color: var(--text-light);
+      line-height: 1.78;
+    }
+
+    /* ─── 10. FINAL CTA ────────────────────────────────────────── */
+    .final-cta {
+      position: relative;
+      background: var(--sage);
+      padding: 108px 32px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .final-cta-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .final-cta h2 {
+      color: var(--cream);
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      margin-bottom: 20px;
+    }
+
+    .final-cta-sub {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: rgba(242, 221, 203, 0.72);
+      margin-bottom: 48px;
+      line-height: 1.78;
+    }
+
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 64px;
+      flex-wrap: wrap;
+    }
+
+    .badge-line {
+      width: 28px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 auto 12px;
+    }
+
+    .badge-text {
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(242, 221, 203, 0.55);
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+    .footer {
+      background: #1a2010;
+      padding: 36px 32px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: rgba(242, 221, 203, 0.38);
+      line-height: 1.7;
+    }
+
+    .footer strong {
+      font-weight: 500;
+      color: rgba(242, 221, 203, 0.6);
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+      }
+
+      .hero {
+        padding: 56px 0 0;
+      }
+
+      .hero-left {
+        padding: 0 24px 48px;
+      }
+
+      .hero-right {
+        margin: 0;
+        box-shadow: none;
+      }
+
+      .pain-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0 24px;
+      }
+
+      .pain-image-wrap {
+        position: static;
+        order: -1;
+        aspect-ratio: 16 / 9;
+        margin-bottom: 48px;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .step {
+        border-left: none;
+        border-top: 1px solid rgba(42, 49, 25, 0.1);
+      }
+
+      .step:nth-child(1),
+      .step:nth-child(2) {
+        border-top: none;
+      }
+
+      .testimonial-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .testimonial-image {
+        min-height: 380px;
+        max-height: 440px;
+      }
+
+      .testimonial-content {
+        padding: 52px 36px;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .result-img-wrap {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .nav {
+        padding: 16px 20px;
+      }
+
+      .nav-logo span {
+        display: none;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        border-top: 1px solid rgba(42, 49, 25, 0.1);
+        border-left: none;
+        padding: 32px 20px;
+      }
+
+      .step:first-child {
+        border-top: none;
+      }
+
+      .btn-cream {
+        width: 100%;
+        display: block;
+        padding: 18px 20px;
+      }
+
+      .trust-badges {
+        gap: 28px;
+      }
+
+      .hero-headline {
+        font-size: 2.2rem;
+      }
+
+      .offer-card {
+        padding: 24px 20px 28px;
+      }
+
+      .testimonial-content {
+        padding: 40px 24px;
+      }
+
+      .faq-list {
+        padding: 0 4px;
+      }
+
+      .mid-cta {
+        padding: 64px 24px;
+      }
+
+      .final-cta {
+        padding: 80px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 1. DEMO BANNER -->
+  <div class="demo-banner" role="note" aria-label="Demo notice">
+    Demo by Clinic Catalyst &nbsp;-&nbsp; Landing Page Concept for Jennifer Carly Aesthetic Medicine
+  </div>
+
+  <!-- 2. STICKY NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo" aria-label="Jennifer Carly Aesthetic Medicine">
+        Jennifer Carly <span>Aesthetic Medicine</span>
+      </div>
+      <a href="#book" class="nav-cta" aria-label="Book your treatment now">Book Now</a>
+    </div>
+  </header>
+
+  <!-- 3. HERO -->
+  <section class="hero" aria-labelledby="hero-headline">
+    <div class="hero-inner">
+
+      <div class="hero-left">
+        <p class="hero-eyebrow">Jawline &amp; Chin Contouring - Gawler, SA</p>
+        <h1 class="hero-headline" id="hero-headline">
+          Your jawline<br>is still in there.<br>Let's bring it back.
+        </h1>
+        <p class="hero-subheadline">
+          If you've ever tilted your chin up for a photo or avoided a side angle,
+          you're not alone. Most women feel this way - and it has nothing to do with
+          weight or willpower. It's one of those areas that changes with time, and
+          the good news is it responds beautifully to treatment.
+        </p>
+        <p class="hero-whisper">
+          One session. One small area. Gentle, comfortable, and you'll wonder why you waited.
+        </p>
+      </div>
+
+      <div class="hero-right" id="book">
+        <div class="hero-image-wrap">
+          <img
+            src="images/skinmd-ba-gallery.png"
+            alt="Side profile before and after comparison showing significant jaw and chin improvement"
+            loading="eager"
+          />
+        </div>
+        <div class="offer-card">
+          <div class="offer-badge">Try It and See</div>
+          <p class="offer-treatment">Jawline Contouring</p>
+          <div class="offer-price">$349</div>
+          <p class="offer-was">Usually $500+ for this area</p>
+          <a href="#" class="btn-primary" aria-label="Book your jawline contouring treatment for $349">
+            Book Now - $349
+          </a>
+          <p class="offer-note">
+            $100 deposit secures your spot - applied to the $349, not on top.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. RESULTS GALLERY -->
+  <section class="results" aria-labelledby="results-heading">
+    <div class="container">
+      <p class="results-label">Client Results</p>
+      <h2 id="results-heading">Real Results</h2>
+      <div class="results-grid">
+
+        <div class="result-item">
+          <div class="result-img-wrap">
+            <img
+              src="images/skinmd-ba-gallery.png"
+              alt="Before and after showing jawline tightening result"
+              loading="lazy"
+            />
+          </div>
+          <p class="result-caption">Jawline Tightening</p>
+        </div>
+
+        <div class="result-item">
+          <div class="result-img-wrap">
+            <img
+              src="images/skinmd-ba-2.png"
+              alt="Before and after showing under-chin contouring result"
+              loading="lazy"
+            />
+          </div>
+          <p class="result-caption">Under-Chin Contouring</p>
+        </div>
+
+        <div class="result-item">
+          <div class="result-img-wrap">
+            <img
+              src="images/skinmd-ba-3.png"
+              alt="Before and after showing skin texture improvement"
+              loading="lazy"
+            />
+          </div>
+          <p class="result-caption">Skin Texture</p>
+        </div>
+
+      </div>
+      <p class="results-disclaimer">
+        Example images shown for demonstration purposes - your own client results will replace these.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. PAIN POINTS -->
+  <section class="pain" aria-labelledby="pain-heading">
+    <div class="pain-inner">
+
+      <div>
+        <p class="pain-eyebrow">You're not alone in this</p>
+        <h2 id="pain-heading">We hear this every week</h2>
+
+        <div class="pain-item">
+          <h4>"I always tilt my chin up in photos."</h4>
+          <p>You've got a whole system of angles and poses. You know exactly how to hold your phone. And you're tired of thinking about it every time someone takes a picture.</p>
+        </div>
+
+        <div class="pain-item">
+          <h4>"I look in the mirror and I don't see me."</h4>
+          <p>You feel bright, energetic, full of life - and then you catch a reflection that doesn't match. It's not vanity. It's wanting the outside to reflect who you are on the inside.</p>
+        </div>
+
+        <div class="pain-item">
+          <h4>"I've tried everything and it won't shift."</h4>
+          <p>You've eaten well, you've moved your body, you've done the work. This area doesn't respond to any of that - it's how your body is built, and it's one of the most common things we treat.</p>
+        </div>
+
+        <div class="pain-item">
+          <h4>"I just want to try one thing and see if it works."</h4>
+          <p>No big commitment. No pressure to sign up for a package. One treatment, one visit, and then you decide what happens next. That's how we'd want it if it were us.</p>
+        </div>
+      </div>
+
+      <div class="pain-image-wrap">
+        <img
+          src="images/morpheus.png"
+          alt="Clinical practitioner applying Morpheus 8 treatment under a patient's chin"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. MID CTA -->
+  <section class="mid-cta" aria-label="Book your treatment">
+    <h2>One treatment. One area.<br>You'll see the difference.</h2>
+    <a href="#book" class="btn-cream" aria-label="Scroll to booking form">Book Now - $349</a>
+  </section>
+
+  <!-- 7. HOW IT WORKS -->
+  <section class="how" aria-labelledby="how-heading">
+    <div class="container">
+      <p class="how-eyebrow">What to expect</p>
+      <h2 id="how-heading">How It Works</h2>
+      <div class="steps-grid">
+
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>You book in</h3>
+          <p>A $100 deposit secures your appointment. It's applied directly to the $349 treatment cost - not an extra charge on top.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>We have a look at your skin</h3>
+          <p>A quick, relaxed chat about what you're hoping for. No pressure. No upselling. Just honest clinical advice.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>We treat the area</h3>
+          <p>Numbed first so you're comfortable. Around 30-45 minutes. Most clients describe it as warm and tingly.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Your skin does the rest</h3>
+          <p>You'll notice some tightening straight away. Real, visible results continue building over 4-12 weeks.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. TESTIMONIAL -->
+  <section class="testimonial" aria-label="Client testimonial">
+    <div class="testimonial-inner">
+
+      <img
+        class="testimonial-image"
+        src="images/clinic-photo.jpg"
+        alt="Portrait of a satisfied Jennifer Carly Aesthetic Medicine client"
+        loading="lazy"
+      />
+
+      <div class="testimonial-content">
+        <div class="stars" aria-label="Five star rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote class="testimonial-quote">
+          "Jen and her team are beyond amazing. They are honest, caring,
+          and make you feel so comfortable. It's the only clinic I would ever
+          go to for any treatment. Every time I have an appointment I count
+          down the days!"
+        </blockquote>
+        <p class="testimonial-author">Verified Client</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <p class="faq-eyebrow">Got questions?</p>
+      <h2 id="faq-heading">Everything you need to know</h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <p class="faq-q">Does it hurt?</p>
+          <p class="faq-a">Not really. We apply numbing cream beforehand so you're comfortable throughout. Most people describe the sensation as warm and tingly - not painful.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">How long until I see results?</p>
+          <p class="faq-a">Most clients notice some tightening in the first week. The main results build progressively from around 8-12 weeks as your skin produces new collagen.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">Will I need time off work?</p>
+          <p class="faq-a">Most people are back to normal the next day. There may be some mild redness or swelling in the area, but nothing that requires downtime for most clients.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">What if I want to treat other areas too?</p>
+          <p class="faq-a">Totally up to you. This offer covers the under-chin area. If you'd like to talk about other areas after your appointment, we're happy to chat - but there's no pressure at all.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">How is this different from surgery?</p>
+          <p class="faq-a">No cutting, no general anaesthetic, no significant recovery time. You walk in, we treat the area, you walk out. The technology works by stimulating your skin's own collagen - not by removing tissue.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">Is the deposit refundable?</p>
+          <p class="faq-a">Yes. If you cancel 48 hours or more before your appointment, your $100 deposit is fully refunded. If you go ahead, it's applied directly to your $349 treatment cost.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FINAL CTA -->
+  <section class="final-cta" aria-labelledby="final-heading">
+    <img
+      class="final-cta-bg"
+      src="images/skincare-journey.png"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+    />
+    <div class="final-cta-content">
+      <h2 id="final-heading">
+        You've been thinking about this for a while.<br>This is your sign.
+      </h2>
+      <p class="final-cta-sub">
+        One visit. One small area. And that confident feeling when you catch your reflection and smile.
+      </p>
+      <a href="#book" class="btn-cream" aria-label="Book your treatment now">Book Now - $349</a>
+
+      <div class="trust-badges" role="list" aria-label="Clinic credentials">
+
+        <div role="listitem">
+          <div class="badge-line"></div>
+          <p class="badge-text">Award<br>Finalist 2026</p>
+        </div>
+
+        <div role="listitem">
+          <div class="badge-line"></div>
+          <p class="badge-text">20+ Years<br>Clinical Experience</p>
+        </div>
+
+        <div role="listitem">
+          <div class="badge-line"></div>
+          <p class="badge-text">5-Star<br>Rated Clinic</p>
+        </div>
+
+        <div role="listitem">
+          <div class="badge-line"></div>
+          <p class="badge-text">No Lock-In<br>Contracts</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      <strong>Jennifer Carly Aesthetic Medicine</strong><br>
+      Gawler, South Australia<br><br>
+      This page is a concept demo produced by Clinic Catalyst.
+      All images are shown for demonstration purposes only.
+    </p>
+  </footer>
+
+</body>
+</html>

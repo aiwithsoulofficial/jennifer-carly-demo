@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer Carly Aesthetic Medicine - Demo Homepage</title>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Fahkwang:wght@300;400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F2DDCB;
+  --cream-light: #FAF3ED;
+  --cream-dark: #E8CBAF;
+  --sage: #2A3119;
+  --sage-mid: #4A5A3A;
+  --sage-light: #6B7A5A;
+  --sage-soft: rgba(42,49,25,0.06);
+  --cc-dark: #0A2A28;
+  --cc-teal: #00D4BC;
+  --green: #49C193;
+  --white: #FFFFFF;
+  --text: #2A2A2A;
+  --text-light: #666;
+  --text-muted: #999;
+  --border: rgba(42,49,25,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Mulish', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Sacramento', cursive;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--sage);
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--sage); }
+
+.nav-cta {
+  padding: 10px 24px !important;
+  background: var(--sage) !important;
+  color: var(--cream) !important;
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* DEMO BANNER */
+.demo-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1001;
+  background: var(--cc-dark);
+  color: var(--cc-teal);
+  text-align: center;
+  padding: 8px 20px;
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav { top: 32px; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 140px 40px 80px;
+  background: var(--cream-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(242,221,203,0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(42,49,25,0.04) 0%, transparent 50%),
+    radial-gradient(circle at 1px 1px, rgba(42,49,25,0.015) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 26px 26px;
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text { max-width: 520px; }
+
+.hero-tag {
+  display: inline-block;
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sage-light);
+  border: 1px solid var(--sage-light);
+  padding: 5px 14px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  color: var(--sage);
+  margin-bottom: 20px;
+}
+
+.hero h1 span { color: var(--sage); }
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  font-weight: 300;
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--sage);
+  color: var(--cream);
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover { background: var(--sage-mid); }
+
+.btn-secondary {
+  display: inline-block;
+  padding: 16px 32px;
+  background: transparent;
+  color: var(--sage);
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--sage);
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover { background: var(--sage); color: var(--cream); }
+
+.hero-proof {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.proof-item {
+  text-align: center;
+}
+
+.proof-num {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--sage);
+  line-height: 1;
+}
+
+.proof-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* HERO IMAGE AREA (placeholder) */
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero-visual .placeholder-label {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage-light);
+  margin-bottom: 12px;
+}
+
+.hero-visual .placeholder-text {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.hero-visual .ba-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: var(--sage);
+  color: var(--cream);
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 3 PATHWAYS */
+.pathways {
+  padding: 80px 40px;
+  background: var(--white);
+}
+
+.pathways-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-label {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sage-light);
+  margin-bottom: 12px;
+}
+
+.pathways h2 {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--sage);
+  margin-bottom: 40px;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+
+.pathway-card {
+  border: 2px solid var(--border);
+  padding: 36px 28px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.pathway-card:hover {
+  border-color: var(--sage);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(42,49,25,0.08);
+}
+
+.pathway-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.pathway-card h3 {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--sage);
+  margin-bottom: 8px;
+}
+
+.pathway-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.pathway-link {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sage);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* RESULTS STRIP */
+.results-strip {
+  padding: 60px 40px;
+  background: var(--sage);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.results-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('images/skincare-journey.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.results-strip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 1px 1px, rgba(242,221,203,0.05) 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.results-strip > * { position: relative; z-index: 1; }
+
+.results-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.results-strip h2 {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.results-strip .sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 36px;
+}
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.ba-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0;
+  overflow: hidden;
+}
+
+.ba-placeholder {
+  aspect-ratio: 1;
+  background: rgba(242,221,203,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+
+.ba-info {
+  padding: 14px 16px;
+}
+
+.ba-treatment {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--cream);
+  letter-spacing: 0.5px;
+}
+
+.ba-detail {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 2px;
+}
+
+/* SKIN ASSESSMENT CTA */
+.assessment-cta {
+  padding: 80px 40px;
+  background: var(--cream-light);
+  text-align: center;
+}
+
+.assessment-inner {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.assessment-cta h2 {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--sage);
+  margin-bottom: 12px;
+}
+
+.assessment-cta .sub {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.assessment-features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.af-item {
+  text-align: center;
+}
+
+.af-item .icon { font-size: 1.5rem; margin-bottom: 8px; }
+
+.af-item .label {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 80px 40px;
+  background: var(--white);
+}
+
+.testimonials-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--sage);
+  margin-bottom: 40px;
+}
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+
+.test-card {
+  padding: 28px;
+  background: var(--cream-light);
+  border: 1px solid var(--border);
+}
+
+.test-stars {
+  color: var(--sage);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.test-quote {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.test-name {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--sage-light);
+}
+
+/* AWARD STRIP */
+.award-strip {
+  padding: 40px;
+  background: var(--sage);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.award-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 1px 1px, rgba(242,221,203,0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.award-strip .badge {
+  font-size: 2rem;
+}
+
+.award-strip p {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cream);
+  letter-spacing: 1px;
+}
+
+.award-strip .sub {
+  font-size: 0.75rem;
+  color: rgba(242,221,203,0.6);
+  font-weight: 400;
+}
+
+/* FOOTER CTA */
+.footer-cta {
+  padding: 80px 40px;
+  text-align: center;
+  background: var(--cream-light);
+}
+
+.footer-cta h2 {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--sage);
+  margin-bottom: 12px;
+}
+
+.footer-cta .sub {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  background: var(--sage);
+  text-align: center;
+}
+
+footer .logo {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--cream);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+footer .details {
+  font-size: 0.8rem;
+  color: rgba(242,221,203,0.5);
+  margin-bottom: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero { padding: 120px 24px 60px; min-height: auto; }
+  .hero-content { grid-template-columns: 1fr; gap: 32px; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero-text { max-width: 100%; }
+  .hero-visual { display: block !important; aspect-ratio: 3/4; max-height: 400px; overflow: hidden; }
+  .hero-visual img { height: 100%; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions a { text-align: center; width: 100%; }
+  .hero-proof { gap: 16px; justify-content: space-between; }
+  .proof-num { font-size: 1.3rem; }
+  .proof-label { font-size: 0.6rem; }
+  .pathway-grid { grid-template-columns: 1fr; }
+  .pathways { padding: 60px 24px; }
+  .ba-grid { grid-template-columns: 1fr 1fr; }
+  .results-strip { padding: 50px 24px; }
+  .test-grid { grid-template-columns: 1fr; }
+  .testimonials { padding: 60px 24px; }
+  .assessment-cta { padding: 60px 24px; }
+  .assessment-features { flex-direction: row; gap: 16px; }
+  .af-item .label { font-size: 0.6rem; }
+  .footer-cta { padding: 60px 24px; }
+  nav { padding: 12px 20px; }
+  .nav-links a { display: none; }
+  .nav-links .nav-cta { display: inline-block !important; padding: 8px 18px; font-size: 0.65rem; }
+  .demo-banner { font-size: 0.55rem; padding: 6px 12px; }
+  .award-strip { flex-direction: column; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- DEMO BANNER -->
+<div class="demo-banner">Demo Only - Redesigned Homepage Concept by Clinic Catalyst</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Jennifer Carly</div>
+  <div class="nav-links">
+    <a href="#">Treatments</a>
+    <a href="#">Results</a>
+    <a href="#">About</a>
+    <a href="#">Skin Assessment</a>
+    <a href="#" class="nav-cta">Book a Consultation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">Award-Winning Aesthetic Medicine</div>
+      <h1>Stop Covering Up. Start <span>Glowing</span>.</h1>
+      <p class="hero-sub">Personalised skin transformation plans backed by 20+ years of clinical expertise. Whether it's fine lines, pigmentation, texture, or that lit-from-within glow - we'll get you there.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary">Book Your Free Consultation</a>
+        <a href="#" class="btn-secondary">Not Sure? Start Here</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <div class="proof-num">20+</div>
+          <div class="proof-label">Years Clinical Experience</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">5,000+</div>
+          <div class="proof-label">Treatments Delivered</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-num">5.0</div>
+          <div class="proof-label">Star Rating</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" style="padding:0;background:none;border:none;">
+      <img src="images/skinmd-ba-gallery.png" alt="Real results - jawline tightening" style="width:100%;display:block;object-fit:cover;aspect-ratio:4/5;">
+      <div class="ba-tag">Real Results - Morpheus 8 Jawline Tightening</div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 PATHWAYS -->
+<div class="pathways">
+  <div class="pathways-inner">
+    <div class="section-label">Where Do You Want to Start?</div>
+    <h2>Three ways in. All of them lead to amazing skin.</h2>
+    <div class="pathway-grid">
+      <div class="pathway-card">
+        <div class="pathway-icon">&#x1F50D;</div>
+        <h3>I'm Not Sure What I Need</h3>
+        <p>Take our free 2-minute skin assessment and get a personalised treatment recommendation based on your skin type, concerns, and goals. No pressure, no commitment.</p>
+        <a href="#" class="pathway-link">Take the Assessment &#x2192;</a>
+      </div>
+      <div class="pathway-card">
+        <div class="pathway-icon">&#x1F4AC;</div>
+        <h3>I Want Expert Guidance</h3>
+        <p>Book a complimentary consultation with our team. Tell us what's bothering you, and we'll create your personalised treatment plan. That's our job - you don't need to know the answer.</p>
+        <a href="#" class="pathway-link">Book a Consultation &#x2192;</a>
+      </div>
+      <div class="pathway-card">
+        <div class="pathway-icon">&#x2728;</div>
+        <h3>I Know What I Want</h3>
+        <p>Already know your treatment? Book directly into our calendar. Morpheus 8, IPL, HydraFacial, injectables - choose your treatment and pick a time that works.</p>
+        <a href="#" class="pathway-link">Book a Treatment &#x2192;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS STRIP -->
+<div class="results-strip">
+  <div class="results-inner">
+    <h2>Real Results. Real Clients. Real Transformations.</h2>
+    <p class="sub">These are actual results from our Gawler clinic. No filters. No editing. Expert treatment, full stop.</p>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <div class="ba-placeholder">Before / After</div>
+        <div class="ba-info">
+          <div class="ba-treatment">Morpheus 8</div>
+          <div class="ba-detail">3 sessions - skin tightening + texture</div>
+        </div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-placeholder">Before / After</div>
+        <div class="ba-info">
+          <div class="ba-treatment">Lumecca IPL</div>
+          <div class="ba-detail">2 sessions - pigmentation + redness</div>
+        </div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-placeholder">Before / After</div>
+        <div class="ba-info">
+          <div class="ba-treatment">Glass Skin Package</div>
+          <div class="ba-detail">Morpheus + filler + anti-wrinkle</div>
+        </div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-placeholder">Before / After</div>
+        <div class="ba-info">
+          <div class="ba-treatment">Evolve X Body</div>
+          <div class="ba-detail">Stubborn fat + skin tightening</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SKIN ASSESSMENT CTA -->
+<div class="assessment-cta">
+  <div class="assessment-inner">
+    <div class="section-label">Free Skin Assessment</div>
+    <h2>Not Sure What You Need? Start Here.</h2>
+    <p class="sub">Answer 7 quick questions and we'll match you with your ideal treatment plan. Personalised to your skin type, concerns, and goals.</p>
+    <div class="assessment-features">
+      <div class="af-item">
+        <div class="icon">&#x23F1;</div>
+        <div class="label">2 Minutes</div>
+      </div>
+      <div class="af-item">
+        <div class="icon">&#x1F4CB;</div>
+        <div class="label">7 Questions</div>
+      </div>
+      <div class="af-item">
+        <div class="icon">&#x1F48E;</div>
+        <div class="label">Personalised Plan</div>
+      </div>
+    </div>
+    <a href="#" class="btn-primary">Start My Skin Assessment</a>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-label">What Our Clients Say</div>
+    <h2>The Proof is in the Results</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="test-quote">"Jen and her team are beyond amazing! They are honest, caring, and make you feel so comfortable. It's the only clinic I would ever go to for any treatment!"</div>
+        <div class="test-name">Verified Client</div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="test-quote">"The staff are amazing at what they do, very professional, very knowledgeable and skilled. They made me feel completely at ease from the moment I walked in."</div>
+        <div class="test-name">Verified Client</div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="test-quote">"She's warm and professional but has a great sense of humour too! She listened to what I wanted and gave me exactly that. I love my natural looking results."</div>
+        <div class="test-name">Verified Client</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AWARD STRIP -->
+<div class="award-strip">
+  <div class="badge">&#x1F3C6;</div>
+  <div>
+    <p>Aesthetic Business Awards 2026 Finalist</p>
+    <div class="sub">Recognised for excellence in aesthetic medicine</div>
+  </div>
+</div>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+  <h2>Your Skin Transformation Starts Here</h2>
+  <p class="sub">Book your complimentary consultation today and let's create your personalised plan.</p>
+  <a href="#" class="btn-primary">Book Your Free Consultation</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Jennifer Carly Aesthetic Medicine</div>
+  <div class="details">Level 1, 1 Commercial Lane, Gawler SA 5118</div>
+  <div class="details">+61 415 823 112</div>
+  <div class="details" style="margin-top:8px; font-size:0.7rem;">Mon-Wed 10am-6pm | Thu-Fri 10am-8pm | Sat 10am-3pm</div>
+</footer>
+
+</body>
+</html>
