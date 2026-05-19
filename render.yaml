@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: jennifer-carly-demo
+    runtime: static
+    buildCommand: echo "Static site"
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache
