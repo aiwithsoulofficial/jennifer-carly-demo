@@ -161,7 +161,8 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      padding-top: 120px;
     }
 
     .hero-bg {
@@ -208,9 +209,8 @@
       pointer-events: none;
     }
 
-    .hero-portrait {
-      display: none;
-    }
+    .hero-portrait { display: none; }
+    .hero-gold-glow { display: none; }
     .hero-portrait img {
       width: 100%;
       display: block;
@@ -236,8 +236,10 @@
       z-index: 10;
       padding: 0 60px;
       max-width: 560px;
-      padding-top: 80px;
-      padding-bottom: 140px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero-kicker {
@@ -1290,21 +1292,10 @@
   <div class="hero-bg" role="img" aria-label="Jennifer Carly clinic hero image"></div>
   <div class="hero-overlay-base" aria-hidden="true"></div>
   <div class="hero-overlay-bottom" aria-hidden="true"></div>
-  <div class="hero-gold-glow" aria-hidden="true"></div>
-
-  <!-- Jennifer portrait positioned right -->
-  <div class="hero-portrait" aria-hidden="true">
-    <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/09/Jennifercarlyaestheticmedicine-221-1.jpg" alt="">
-    <div class="hero-portrait-vignette"></div>
-  </div>
 
   <div class="hero-content">
     <div class="hero-kicker">Award-Winning - Excellence in Aesthetic Medicine</div>
-    <h1 class="hero-h1">
-      Your skin deserves<br>
-      someone who sees<br>
-      <em>you</em> clearly.
-    </h1>
+    <h1 class="hero-h1">Your skin deserves someone who sees <em>you</em> clearly.</h1>
     <p class="hero-body">
       Twenty years of clinical care. A genuine clinician who understands what your skin needs - not just what looks good on a price list.
     </p>
