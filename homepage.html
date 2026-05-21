@@ -1,847 +1,1799 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jennifer Carly Aesthetic Medicine - Demo Homepage</title>
-<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Fahkwang:wght@300;400;500;600;700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --cream: #F2DDCB;
-  --cream-light: #FAF3ED;
-  --cream-dark: #E8CBAF;
-  --sage: #2A3119;
-  --sage-mid: #4A5A3A;
-  --sage-light: #6B7A5A;
-  --sage-soft: rgba(42,49,25,0.06);
-  --cc-dark: #0A2A28;
-  --cc-teal: #00D4BC;
-  --green: #49C193;
-  --white: #FFFFFF;
-  --text: #2A2A2A;
-  --text-light: #666;
-  --text-muted: #999;
-  --border: rgba(42,49,25,0.1);
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Mulish', sans-serif;
-  color: var(--text);
-  background: var(--white);
-  line-height: 1.7;
-}
-
-/* NAV */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  padding: 16px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-logo {
-  font-family: 'Sacramento', cursive;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: var(--sage);
-  letter-spacing: 0.02em;
-}
-
-.nav-links {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-}
-
-.nav-links a {
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--text-light);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover { color: var(--sage); }
-
-.nav-cta {
-  padding: 10px 24px !important;
-  background: var(--sage) !important;
-  color: var(--cream) !important;
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.7rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 1.5px !important;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-/* DEMO BANNER */
-.demo-banner {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1001;
-  background: var(--cc-dark);
-  color: var(--cc-teal);
-  text-align: center;
-  padding: 8px 20px;
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-nav { top: 32px; }
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 140px 40px 80px;
-  background: var(--cream-light);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 30%, rgba(242,221,203,0.5) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(42,49,25,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 1px 1px, rgba(42,49,25,0.015) 1px, transparent 0);
-  background-size: 100% 100%, 100% 100%, 26px 26px;
-  pointer-events: none;
-}
-
-.hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-text { max-width: 520px; }
-
-.hero-tag {
-  display: inline-block;
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--sage-light);
-  border: 1px solid var(--sage-light);
-  padding: 5px 14px;
-  margin-bottom: 24px;
-}
-
-.hero h1 {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 2.6rem;
-  line-height: 1.2;
-  color: var(--sage);
-  margin-bottom: 20px;
-}
-
-.hero h1 span { color: var(--sage); }
-
-.hero-sub {
-  font-size: 1.05rem;
-  color: var(--text-light);
-  font-weight: 300;
-  margin-bottom: 32px;
-  line-height: 1.8;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 16px 32px;
-  background: var(--sage);
-  color: var(--cream);
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.btn-primary:hover { background: var(--sage-mid); }
-
-.btn-secondary {
-  display: inline-block;
-  padding: 16px 32px;
-  background: transparent;
-  color: var(--sage);
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 2px solid var(--sage);
-  transition: all 0.2s;
-}
-
-.btn-secondary:hover { background: var(--sage); color: var(--cream); }
-
-.hero-proof {
-  display: flex;
-  gap: 32px;
-  margin-top: 32px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-}
-
-.proof-item {
-  text-align: center;
-}
-
-.proof-num {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: var(--sage);
-  line-height: 1;
-}
-
-.proof-label {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  letter-spacing: 0.5px;
-  margin-top: 4px;
-}
-
-/* HERO IMAGE AREA */
-.hero-visual {
-  position: relative;
-  aspect-ratio: 4/5;
-  background: var(--cream);
-  border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
-}
-
-
-.hero-visual .ba-tag {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: var(--sage);
-  color: var(--cream);
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 10px;
-  text-align: center;
-}
-
-/* 3 PATHWAYS */
-.pathways {
-  padding: 80px 40px;
-  background: var(--white);
-}
-
-.pathways-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.section-label {
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--sage-light);
-  margin-bottom: 12px;
-}
-
-.pathways h2 {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  color: var(--sage);
-  margin-bottom: 40px;
-}
-
-.pathway-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  text-align: left;
-}
-
-.pathway-card {
-  border: 2px solid var(--border);
-  padding: 36px 28px;
-  transition: all 0.3s;
-  cursor: pointer;
-  position: relative;
-}
-
-.pathway-card:hover {
-  border-color: var(--sage);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(42,49,25,0.08);
-}
-
-.pathway-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
-}
-
-.pathway-card h3 {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: var(--sage);
-  margin-bottom: 8px;
-}
-
-.pathway-card p {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.pathway-link {
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--sage);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* RESULTS STRIP */
-.results-strip {
-  padding: 60px 40px;
-  background: var(--sage);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.results-strip::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/skincare-journey.webp');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.06;
-  pointer-events: none;
-}
-
-.results-strip::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 1px 1px, rgba(242,221,203,0.05) 1px, transparent 0);
-  background-size: 28px 28px;
-  pointer-events: none;
-}
-
-.results-strip > * { position: relative; z-index: 1; }
-
-.results-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.results-strip h2 {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: var(--white);
-  margin-bottom: 8px;
-}
-
-.results-strip .sub {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 36px;
-}
-
-.ba-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.ba-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 0;
-  overflow: hidden;
-}
-
-
-.ba-info {
-  padding: 14px 16px;
-}
-
-.ba-treatment {
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--cream);
-  letter-spacing: 0.5px;
-}
-
-.ba-detail {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.5);
-  margin-top: 2px;
-}
-
-/* SKIN ASSESSMENT CTA */
-.assessment-cta {
-  padding: 80px 40px;
-  background: var(--cream-light);
-  text-align: center;
-}
-
-.assessment-inner {
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-.assessment-cta h2 {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  color: var(--sage);
-  margin-bottom: 12px;
-}
-
-.assessment-cta .sub {
-  font-size: 1rem;
-  color: var(--text-light);
-  margin-bottom: 32px;
-  line-height: 1.8;
-}
-
-.assessment-features {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 32px;
-}
-
-.af-item {
-  text-align: center;
-}
-
-.af-item .icon { font-size: 1.5rem; margin-bottom: 8px; }
-
-.af-item .label {
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--sage);
-}
-
-/* TESTIMONIALS */
-.testimonials {
-  padding: 80px 40px;
-  background: var(--white);
-}
-
-.testimonials-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: var(--sage);
-  margin-bottom: 40px;
-}
-
-.test-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  text-align: left;
-}
-
-.test-card {
-  padding: 28px;
-  background: var(--cream-light);
-  border: 1px solid var(--border);
-}
-
-.test-stars {
-  color: var(--sage);
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-}
-
-.test-quote {
-  font-size: 0.9rem;
-  color: var(--text);
-  font-style: italic;
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.test-name {
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--sage-light);
-}
-
-/* AWARD STRIP */
-.award-strip {
-  padding: 40px;
-  background: var(--sage);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.award-strip::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 1px 1px, rgba(242,221,203,0.04) 1px, transparent 0);
-  background-size: 24px 24px;
-  pointer-events: none;
-}
-
-.award-strip .badge {
-  font-size: 2rem;
-}
-
-.award-strip p {
-  font-family: 'Fahkwang', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--cream);
-  letter-spacing: 1px;
-}
-
-.award-strip .sub {
-  font-size: 0.75rem;
-  color: rgba(242,221,203,0.6);
-  font-weight: 400;
-}
-
-/* FOOTER CTA */
-.footer-cta {
-  padding: 80px 40px;
-  text-align: center;
-  background: var(--cream-light);
-}
-
-.footer-cta h2 {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
-  color: var(--sage);
-  margin-bottom: 12px;
-}
-
-.footer-cta .sub {
-  font-size: 1rem;
-  color: var(--text-light);
-  margin-bottom: 32px;
-}
-
-/* FOOTER */
-footer {
-  padding: 40px;
-  background: var(--sage);
-  text-align: center;
-}
-
-footer .logo {
-  font-family: 'Fahkwang', sans-serif;
-  font-weight: 400;
-  font-size: 0.85rem;
-  color: var(--cream);
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-footer .details {
-  font-size: 0.8rem;
-  color: rgba(242,221,203,0.5);
-  margin-bottom: 4px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero { padding: 120px 24px 60px; min-height: auto; }
-  .hero-content { grid-template-columns: 1fr; gap: 32px; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero-text { max-width: 100%; }
-  .hero-visual { display: block !important; aspect-ratio: 3/4; max-height: 400px; overflow: hidden; }
-  .hero-visual img { height: 100%; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions a { text-align: center; width: 100%; }
-  .hero-proof { gap: 16px; justify-content: space-between; }
-  .proof-num { font-size: 1.3rem; }
-  .proof-label { font-size: 0.6rem; }
-  .pathway-grid { grid-template-columns: 1fr; }
-  .pathways { padding: 60px 24px; }
-  .ba-grid { grid-template-columns: 1fr 1fr; }
-  .results-strip { padding: 50px 24px; }
-  .test-grid { grid-template-columns: 1fr; }
-  .testimonials { padding: 60px 24px; }
-  .assessment-cta { padding: 60px 24px; }
-  .assessment-features { flex-direction: row; gap: 16px; }
-  .af-item .label { font-size: 0.6rem; }
-  .footer-cta { padding: 60px 24px; }
-  nav { padding: 12px 20px; }
-  .nav-links a { display: none; }
-  .nav-links .nav-cta { display: inline-block !important; padding: 8px 18px; font-size: 0.65rem; }
-  .demo-banner { font-size: 0.55rem; padding: 6px 12px; }
-  .award-strip { flex-direction: column; gap: 8px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jennifer Carly Aesthetic Medicine - Gawler SA | Award-Winning Clinic</title>
+  <meta name="description" content="20+ years of clinical excellence. Aesthetic medicine for ageing, pigmentation, texture and skin confidence. Gawler SA + Melbourne June 2026. Aesthetic Business Awards 2026 finalist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #0C0B0E;
+      --ink-soft:   #161418;
+      --gold:       #C5963A;
+      --gold-light: #D4A85A;
+      --gold-pale:  rgba(197,150,58,0.12);
+      --cream:      #FAF6F0;
+      --linen:      #F3ECE2;
+      --white:      #ffffff;
+      --mid:        #4A4552;
+      --faint:      #8A8898;
+      --cc-dark:    #0A2A28;
+      --cc-teal:    #00D4BC;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Mulish', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    /* =============================================
+       GRAIN TEXTURE
+    ============================================= */
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+    ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.22s; }
+    .reveal-delay-3 { transition-delay: 0.34s; }
+    .reveal-delay-4 { transition-delay: 0.46s; }
+
+    /* =============================================
+       DEMO BANNER
+    ============================================= */
+    .demo-banner {
+      background: var(--cc-dark);
+      color: var(--cc-teal);
+      text-align: center;
+      padding: 10px 24px;
+      font-family: 'Mulish', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 200;
+    }
+    .demo-banner span { opacity: 0.5; color: rgba(0,212,188,0.55); }
+
+    /* =============================================
+       NAV
+    ============================================= */
+    nav {
+      position: fixed;
+      top: 36px;
+      left: 0; right: 0;
+      z-index: 150;
+      padding: 24px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: top 0.35s ease, background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
+    }
+    nav.anchored {
+      top: 0;
+      background: rgba(12,11,14,0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 16px 60px;
+      box-shadow: 0 1px 0 rgba(197,150,58,0.15);
+    }
+    .nav-logo img {
+      height: 46px;
+      width: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s;
+    }
+    nav.anchored .nav-logo img { filter: brightness(0) invert(1); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.62);
+      text-decoration: none;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink) !important;
+      background: var(--gold);
+      padding: 13px 28px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    /* =============================================
+       HERO - CINEMATIC FULL VIEWPORT
+    ============================================= */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 720px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/home-banner.jpg');
+      background-size: cover;
+      background-position: center top;
+      transform: scale(1.04);
+      animation: heroZoom 12s ease-out forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.04); }
+      to   { transform: scale(1.0); }
+    }
+
+    .hero-overlay-base {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        155deg,
+        rgba(12,11,14,0.90) 0%,
+        rgba(12,11,14,0.58) 50%,
+        rgba(12,11,14,0.28) 100%
+      );
+    }
+    .hero-overlay-bottom {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(12,11,14,0.97) 0%,
+        rgba(12,11,14,0.38) 32%,
+        transparent 62%
+      );
+    }
+    .hero-gold-glow {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 50%;
+      background: radial-gradient(ellipse at 15% 100%, rgba(197,150,58,0.16) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-portrait {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 42%;
+      max-width: 620px;
+      z-index: 5;
+      display: flex;
+      align-items: flex-end;
+    }
+    .hero-portrait img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      mask-image: linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%),
+                  linear-gradient(to top, transparent 0%, black 6%);
+      mask-composite: intersect;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 18%, black 80%, transparent 100%),
+                          linear-gradient(to top, transparent 0%, black 6%);
+      -webkit-mask-composite: destination-in;
+    }
+    .hero-portrait-vignette {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(12,11,14,0.6) 0%, transparent 30%),
+                  linear-gradient(to top, rgba(12,11,14,0.7) 0%, transparent 25%);
+      z-index: 6;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding: 0 80px;
+      max-width: 800px;
+      padding-top: 80px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: riseIn 0.9s cubic-bezier(0.22,1,0.36,1) 0.2s forwards;
+    }
+    .hero-kicker::before {
+      content: '';
+      display: block;
+      width: 36px; height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-h1 {
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      font-size: clamp(2.6rem, 5.5vw, 5rem);
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: riseIn 1s cubic-bezier(0.22,1,0.36,1) 0.42s forwards;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 300;
+    }
+
+    .hero-body {
+      font-size: clamp(0.93rem, 1.7vw, 1.05rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.78;
+      max-width: 500px;
+      margin-bottom: 42px;
+      opacity: 0;
+      animation: riseIn 0.9s cubic-bezier(0.22,1,0.36,1) 0.65s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: riseIn 0.9s cubic-bezier(0.22,1,0.36,1) 0.85s forwards;
+    }
+    .btn-gold {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--gold);
+      padding: 18px 38px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline-white {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      border: 1px solid rgba(255,255,255,0.28);
+      padding: 18px 38px;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .btn-outline-white:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Stats bar */
+    .hero-stats-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0 80px 52px;
+      gap: 56px;
+      opacity: 0;
+      animation: riseIn 0.9s cubic-bezier(0.22,1,0.36,1) 1.08s forwards;
+    }
+    .hstat { text-align: left; }
+    .hstat-num {
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      font-size: 2.2rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .hstat-label {
+      font-size: 0.63rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 7px;
+    }
+    .hstat-divider {
+      width: 1px; height: 52px;
+      background: rgba(255,255,255,0.1);
+      align-self: center;
+    }
+
+    /* Scroll cue */
+    .hero-scroll-cue {
+      position: absolute;
+      right: 60px; bottom: 60px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: fadeIn 1s ease 1.6s forwards;
+    }
+    .scroll-cue-line {
+      width: 1px; height: 52px;
+      background: linear-gradient(to bottom, rgba(197,150,58,0.8), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    .scroll-cue-text {
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+      writing-mode: vertical-rl;
+    }
+    @keyframes scrollPulse { 0%,100%{opacity:0.6;} 50%{opacity:1;} }
+    @keyframes riseIn {
+      from { opacity:0; transform:translateY(22px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+    /* =============================================
+       IMAGE STRIP CAROUSEL
+    ============================================= */
+    .strip {
+      background: var(--ink);
+      overflow: hidden;
+      position: relative;
+      padding: 4px 0;
+      border-top: 1px solid rgba(197,150,58,0.12);
+      border-bottom: 1px solid rgba(197,150,58,0.12);
+    }
+    .strip-track {
+      display: flex;
+      gap: 4px;
+      animation: scrollLeft 36s linear infinite;
+      width: max-content;
+      will-change: transform;
+    }
+    .strip-track:hover { animation-play-state: paused; }
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .strip-img {
+      width: 260px; height: 200px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      flex-shrink: 0;
+      filter: brightness(0.78) saturate(0.82);
+      transition: filter 0.4s, transform 0.4s;
+    }
+    .strip-img:hover { filter: brightness(1.05) saturate(1.1); transform: scale(1.02); }
+    .strip-label {
+      position: relative;
+    }
+    .strip-label-inner {
+      position: absolute;
+      bottom: 8px; left: 8px;
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(12,11,14,0.75);
+      padding: 4px 10px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* =============================================
+       SECTION LABELS
+    ============================================= */
+    .eyebrow {
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px; height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .eyebrow-light { color: rgba(255,255,255,0.5); }
+    .eyebrow-light::before { background: rgba(255,255,255,0.3); }
+
+    .heading-xl {
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+      line-height: 1.15;
+      letter-spacing: 0.02em;
+    }
+    .heading-xl em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold);
+    }
+    .heading-xl-light { color: var(--white); }
+    .heading-xl-dark  { color: var(--ink); }
+
+    .divider-gold {
+      width: 48px; height: 2px;
+      background: var(--gold);
+      margin: 28px 0;
+    }
+
+    /* =============================================
+       THREE CONCERNS - EDITORIAL STAGGERED
+    ============================================= */
+    .concerns {
+      background: var(--ink);
+      padding: 110px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .concerns::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .concerns::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 55%; height: 55%;
+      background: radial-gradient(ellipse at 100% 100%, rgba(197,150,58,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .concerns-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 72px;
+      position: relative;
+      z-index: 2;
+    }
+    .concerns-header-text { max-width: 520px; }
+    .concerns-header-text .heading-xl { margin-top: 20px; }
+    .concerns-header-note {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.05em;
+      line-height: 1.65;
+      text-align: right;
+      max-width: 270px;
+    }
+
+    /* Editorial: large left + two stacked right */
+    .concerns-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 4px;
+      max-width: 1200px;
+      position: relative;
+      z-index: 2;
+    }
+    .concern-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .concern-card--large { grid-row: span 2; }
+
+    .concern-img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.75s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .concern-card--large .concern-img  { height: 680px; }
+    .concern-card--small .concern-img  { height: 337px; }
+    .concern-card:hover .concern-img   { transform: scale(1.05); }
+
+    .concern-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top,
+        rgba(12,11,14,0.97) 0%,
+        rgba(12,11,14,0.44) 45%,
+        rgba(12,11,14,0.08) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 36px 36px 40px;
+      transition: background 0.4s;
+    }
+    .concern-card:hover .concern-overlay {
+      background: linear-gradient(to top,
+        rgba(12,11,14,1) 0%,
+        rgba(12,11,14,0.65) 55%,
+        rgba(197,150,58,0.06) 100%
+      );
+    }
+    .concern-number {
+      position: absolute;
+      top: 24px; right: 28px;
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      font-size: 5rem;
+      color: rgba(197,150,58,0.1);
+      line-height: 1;
+      transition: color 0.3s;
+    }
+    .concern-card:hover .concern-number { color: rgba(197,150,58,0.24); }
+    .concern-tag {
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .concern-headline {
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      color: var(--white);
+      line-height: 1.25;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+    .concern-card--large .concern-headline { font-size: 1.55rem; }
+    .concern-card--small .concern-headline { font-size: 1.12rem; }
+    .concern-body {
+      font-size: 0.84rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.68;
+      margin-bottom: 24px;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.45s ease, opacity 0.45s ease;
+    }
+    .concern-card:hover .concern-body { max-height: 110px; opacity: 1; }
+    .concern-link {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: gap 0.2s;
+    }
+    .concern-link::after { content: '&#8594;'; }
+    .concern-card:hover .concern-link { gap: 15px; }
+
+    /* =============================================
+       JEN'S STORY - SPLIT SECTION (linen light)
+    ============================================= */
+    .jen-story {
+      background: var(--linen);
+      position: relative;
+      overflow: hidden;
+    }
+    .jen-story::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    .jen-story-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      z-index: 1;
+    }
+    .jen-story-image {
+      position: relative;
+      overflow: hidden;
+      min-height: 640px;
+    }
+    .jen-story-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+    .jen-story-image:hover img { transform: scale(1.03); }
+    .jen-story-image-badge {
+      position: absolute;
+      bottom: 36px; left: 36px;
+      background: var(--ink);
+      color: var(--gold);
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 14px 24px;
+      z-index: 5;
+    }
+    .jen-story-content {
+      padding: 100px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .jen-story-content .eyebrow { margin-bottom: 24px; }
+    .jen-story-content .heading-xl { color: var(--ink); margin-bottom: 28px; }
+
+    .jen-story-body {
+      font-size: 0.97rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.85;
+    }
+    .jen-story-body + .jen-story-body { margin-top: 16px; }
+
+    .jen-credentials {
+      margin-top: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .jen-cred {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(12,11,14,0.08);
+      align-items: flex-start;
+    }
+    .jen-cred:first-child { border-top: 1px solid rgba(12,11,14,0.08); }
+    .cred-check {
+      width: 22px; height: 22px;
+      background: var(--gold);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .cred-text {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--mid);
+      line-height: 1.55;
+    }
+    .cred-text strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .jen-award-strip {
+      margin-top: 44px;
+      padding: 24px 28px;
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .jen-award-strip::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 0% 50%, rgba(197,150,58,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .award-icon {
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      font-size: 2.4rem;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .award-text { position: relative; z-index: 1; }
+    .award-title {
+      font-family: 'Fahkwang', serif;
+      font-weight: 300;
+      font-size: 0.88rem;
+      color: var(--white);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .award-sub {
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.42);
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+
+    /* =============================================
+       TESTIMONIALS - DARK GRAIN (reviews from real source only)
+    ============================================= */
+    .proof {
+      background: var(--ink-soft);
+      padding: 110px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .proof::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .proof-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 72px;
+      position: relative;
+      z-index: 2;
+    }
+    .proof-rating { text-align: right; }
+    .proof-score {
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      font-size: 5.5rem;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+    .proof-stars {
+      font-size: 1.1rem;
+      color: var(--gold);
+      letter-spacing: 4px;
+      margin-bottom: 6px;
+    }
+    .proof-count {
+      font-size: 0.71rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.32);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .reviews-layout {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 1fr;
+      gap: 1px;
+      position: relative;
+      z-index: 2;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.032);
+      padding: 44px 38px;
+      position: relative;
+      transition: background 0.3s, border-color 0.3s;
+      border-bottom: 1px solid rgba(197,150,58,0);
+    }
+    .review-card:hover {
+      background: rgba(197,150,58,0.05);
+      border-color: rgba(197,150,58,0.25);
+    }
+    .review-card--featured {
+      padding: 52px 44px;
+      background: rgba(197,150,58,0.06);
+      border-bottom: 1px solid rgba(197,150,58,0.15);
+    }
+    .review-mark {
+      font-family: 'Fahkwang', serif;
+      font-size: 5rem;
+      color: rgba(197,150,58,0.1);
+      line-height: 0.8;
+      margin-bottom: 12px;
+    }
+    .review-stars {
+      font-size: 0.78rem;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+    .review-text {
+      font-size: 0.91rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.8;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+    .review-card--featured .review-text {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .review-author {
+      font-size: 0.71rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .review-source {
+      font-size: 0.64rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.28);
+      letter-spacing: 0.07em;
+      margin-top: 5px;
+    }
+
+    /* =============================================
+       RESULTS MOSAIC - dark bg image strip
+    ============================================= */
+    .results-mosaic {
+      background: var(--ink);
+      padding: 110px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .results-mosaic::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .results-mosaic::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 55%; height: 55%;
+      background: radial-gradient(ellipse at 0% 0%, rgba(197,150,58,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .results-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: flex-end;
+      margin-bottom: 64px;
+      position: relative;
+      z-index: 2;
+    }
+    .results-header .heading-xl { margin-top: 20px; }
+    .results-header-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      text-align: right;
+    }
+    .results-header-right p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      max-width: 360px;
+      margin-bottom: 24px;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      position: relative;
+      z-index: 2;
+    }
+    .result-card {
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+    .result-card img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: brightness(0.8) saturate(0.85);
+      transition: filter 0.4s, transform 0.5s;
+    }
+    .result-card:hover img {
+      filter: brightness(1) saturate(1);
+      transform: scale(1.04);
+    }
+    .result-card-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 40px 18px 16px;
+      background: linear-gradient(to top, rgba(12,11,14,0.92) 0%, transparent 100%);
+    }
+    .result-concern {
+      font-family: 'Fahkwang', serif;
+      font-weight: 300;
+      font-size: 0.88rem;
+      color: var(--white);
+      letter-spacing: 0.06em;
+    }
+    .result-note {
+      font-size: 0.64rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .result-card--wide {
+      grid-column: span 2;
+    }
+    .result-card--wide img {
+      aspect-ratio: 3/2;
+    }
+
+    /* =============================================
+       ASSESSMENT CTA - cream grain section
+    ============================================= */
+    .assessment {
+      background: var(--cream);
+      padding: 120px 80px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .assessment::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .assessment-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .assessment .eyebrow { justify-content: center; }
+    .assessment .eyebrow::before { display: none; }
+    .assessment .heading-xl { color: var(--ink); margin-top: 20px; margin-bottom: 20px; }
+    .assessment-body {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+    .assessment-features {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .af-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .af-num {
+      font-family: 'Fahkwang', serif;
+      font-weight: 200;
+      font-size: 2.4rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .af-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+    .af-divider {
+      width: 1px;
+      background: rgba(12,11,14,0.12);
+      align-self: stretch;
+      margin: 8px 0;
+    }
+
+    /* =============================================
+       BOOKING CTA - full bleed dark
+    ============================================= */
+    .booking-cta {
+      position: relative;
+      overflow: hidden;
+    }
+    .booking-cta-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/skincare-journey.webp');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+    }
+    .booking-cta-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(12,11,14,0.97) 0%, rgba(12,11,14,0.85) 100%);
+    }
+    .booking-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 3;
+    }
+    .booking-cta-inner {
+      position: relative;
+      z-index: 5;
+      padding: 120px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .booking-cta .heading-xl { color: var(--white); margin-top: 20px; margin-bottom: 24px; }
+    .booking-cta-body {
+      font-size: 0.98rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.85;
+      margin-bottom: 44px;
+    }
+    .booking-right {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .contact-block {
+      padding: 28px 32px;
+      border: 1px solid rgba(197,150,58,0.2);
+      background: rgba(197,150,58,0.04);
+    }
+    .contact-block-label {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .contact-block-value {
+      font-family: 'Fahkwang', serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.78);
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
+    .social-line {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em;
+    }
+    .social-line a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .social-line a:hover { opacity: 0.75; }
+    .social-line::before {
+      content: '';
+      width: 22px; height: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: var(--ink);
+      padding: 52px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(197,150,58,0.1);
+    }
+    .footer-logo img {
+      height: 42px; width: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+      opacity: 0.65;
+    }
+    .footer-center {
+      text-align: center;
+    }
+    .footer-address {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.06em;
+      line-height: 1.7;
+    }
+    .footer-address strong {
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      display: block;
+    }
+    .footer-right {
+      text-align: right;
+    }
+    .footer-right p {
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+    .footer-right a {
+      font-size: 0.68rem;
+      color: rgba(197,150,58,0.6);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+    }
+
+    /* =============================================
+       RESPONSIVE 768px
+    ============================================= */
+    @media (max-width: 860px) {
+      nav { padding: 20px 24px; top: 34px; }
+      nav.anchored { padding: 14px 24px; }
+      .nav-links { display: none; }
+      .nav-right { gap: 0; }
+      .nav-cta { padding: 11px 20px; font-size: 0.66rem; }
+
+      .hero { min-height: 100svh; }
+      .hero-content { padding: 0 28px; padding-top: 100px; max-width: 100%; }
+      .hero-h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .hero-portrait { width: 55%; opacity: 0.5; }
+      .hero-stats-bar { padding: 0 28px 36px; gap: 28px; flex-wrap: wrap; }
+      .hstat-num { font-size: 1.6rem; }
+      .hstat-divider { display: none; }
+      .hero-scroll-cue { display: none; }
+
+      .strip-img { width: 200px; height: 160px; }
+
+      .concerns { padding: 72px 28px; }
+      .concerns-header { flex-direction: column; gap: 16px; align-items: flex-start; }
+      .concerns-header-note { text-align: left; max-width: 100%; }
+      .concerns-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .concern-card--large { grid-row: span 1; }
+      .concern-card--large .concern-img { height: 420px; }
+      .concern-card--small .concern-img { height: 300px; }
+      .concern-body { max-height: 110px; opacity: 1; }
+
+      .jen-story-inner { grid-template-columns: 1fr; }
+      .jen-story-image { min-height: 380px; }
+      .jen-story-content { padding: 64px 28px; }
+
+      .proof { padding: 72px 28px; }
+      .proof-top { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .proof-rating { text-align: left; }
+      .reviews-layout { grid-template-columns: 1fr; gap: 1px; }
+      .review-card--featured { padding: 44px 32px; }
+
+      .results-mosaic { padding: 72px 28px; }
+      .results-header { grid-template-columns: 1fr; }
+      .results-header-right { align-items: flex-start; text-align: left; }
+      .results-grid { grid-template-columns: repeat(2, 1fr); }
+      .result-card--wide { grid-column: span 2; }
+
+      .assessment { padding: 80px 28px; }
+      .assessment-features { gap: 28px; }
+
+      .booking-cta-inner { grid-template-columns: 1fr; gap: 48px; padding: 80px 28px; }
+
+      footer { flex-direction: column; gap: 32px; text-align: center; padding: 44px 28px; }
+      .footer-right { text-align: center; }
+    }
+
+    @media (max-width: 390px) {
+      .hero-h1 { font-size: 2rem; }
+      .concerns { padding: 60px 20px; }
+      .results-grid { grid-template-columns: 1fr; }
+      .result-card--wide { grid-column: span 1; }
+      .result-card--wide img { aspect-ratio: 3/4; }
+      .assessment-features { flex-direction: column; align-items: center; gap: 20px; }
+      .af-divider { display: none; }
+    }
+  </style>
 </head>
 <body>
 
 <!-- DEMO BANNER -->
-<div class="demo-banner">Demo Only - Redesigned Homepage Concept by Clinic Catalyst</div>
+<div class="demo-banner">
+  Demo Only - Redesigned Homepage Concept by&nbsp;<span>Clinic Catalyst &nbsp;/&nbsp; Powered by AI with Soul</span>
+</div>
 
 <!-- NAV -->
-<nav>
-  <a href="#" aria-label="Jennifer Carly Aesthetic Medicine home"><img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/JC-Logo.png" alt="Jennifer Carly Aesthetic Medicine" style="height:48px;width:auto;display:block;"></a>
-  <div class="nav-links">
-    <a href="#">Treatments</a>
-    <a href="#">Results</a>
-    <a href="#">About</a>
-    <a href="#">Skin Assessment</a>
-    <a href="#" class="nav-cta">Book a Consultation</a>
+<nav id="main-nav" aria-label="Primary navigation">
+  <a href="#" class="nav-logo" aria-label="Jennifer Carly Aesthetic Medicine home">
+    <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/JC-Logo.png" alt="Jennifer Carly Aesthetic Medicine">
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#">Skin Concerns</a></li>
+      <li><a href="#">Results</a></li>
+      <li><a href="#">About Jen</a></li>
+      <li><a href="#">Skin Assessment</a></li>
+    </ul>
+    <a href="#" class="nav-cta">Book Your Consultation</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg" role="img" aria-label="Jennifer Carly clinic hero image"></div>
+  <div class="hero-overlay-base" aria-hidden="true"></div>
+  <div class="hero-overlay-bottom" aria-hidden="true"></div>
+  <div class="hero-gold-glow" aria-hidden="true"></div>
+
+  <!-- Jennifer portrait positioned right -->
+  <div class="hero-portrait" aria-hidden="true">
+    <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/09/Jennifercarlyaestheticmedicine-221-1.jpg" alt="">
+    <div class="hero-portrait-vignette"></div>
+  </div>
+
   <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-tag">Award-Winning Aesthetic Medicine</div>
-      <h1>Stop Covering Up. Start <span>Glowing</span>.</h1>
-      <p class="hero-sub">Personalised skin transformation plans backed by 20+ years of clinical expertise. Whether it's fine lines, pigmentation, texture, or that lit-from-within glow - we'll get you there.</p>
-      <div class="hero-actions">
-        <a href="#" class="btn-primary">Book Your Consultation</a>
-        <a href="assessment.html" class="btn-secondary">Not Sure? Start Here</a>
-      </div>
-      <div class="hero-proof">
-        <div class="proof-item">
-          <div class="proof-num">20+</div>
-          <div class="proof-label">Years Clinical Experience</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">5,000+</div>
-          <div class="proof-label">Treatments Delivered</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">5.0</div>
-          <div class="proof-label">Star Rating</div>
-        </div>
-      </div>
+    <div class="hero-kicker">Aesthetic Business Awards 2026 Finalist</div>
+    <h1 class="hero-h1">
+      Your skin deserves<br>
+      someone who sees<br>
+      <em>you</em> clearly.
+    </h1>
+    <p class="hero-body">
+      Twenty years of clinical care. An eye trained in oncology wards and paediatric units before aesthetic medicine. Jen brings something most clinics can't offer - a genuine clinician who understands what your skin needs, not just what looks good on a price list.
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="btn-gold">Book Your Consultation</a>
+      <a href="assessment.html" class="btn-outline-white">Not sure where to start?</a>
     </div>
-    <div class="hero-visual" style="padding:0;background:none;border:none;">
-      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/jennifercarly-165.jpg" alt="Jennifer Carly - Award-Winning Aesthetic Medicine Practitioner" style="width:100%;display:block;object-fit:cover;aspect-ratio:4/5;">
-      <div class="ba-tag">Jennifer Carly - 20+ Years Clinical Excellence</div>
+  </div>
+
+  <div class="hero-stats-bar" aria-label="Key statistics">
+    <div class="hstat">
+      <div class="hstat-num">20+</div>
+      <div class="hstat-label">Years Clinical</div>
+    </div>
+    <div class="hstat-divider" aria-hidden="true"></div>
+    <div class="hstat">
+      <div class="hstat-num">RN</div>
+      <div class="hstat-label">Registered Nurse</div>
+    </div>
+    <div class="hstat-divider" aria-hidden="true"></div>
+    <div class="hstat">
+      <div class="hstat-num">2026</div>
+      <div class="hstat-label">Award Finalist</div>
+    </div>
+    <div class="hstat-divider" aria-hidden="true"></div>
+    <div class="hstat">
+      <div class="hstat-num">2</div>
+      <div class="hstat-label">Clinics &mdash; Gawler + Melbourne</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue" aria-hidden="true">
+    <div class="scroll-cue-line"></div>
+    <span class="scroll-cue-text">Scroll</span>
+  </div>
+</section>
+
+<!-- IMAGE CAROUSEL STRIP -->
+<div class="strip" aria-label="Before and after results gallery" role="region">
+  <div class="strip-track" aria-hidden="true">
+    <!-- Set 1 -->
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Acne-Scarring_1.png" alt="Acne scarring results">
+      <div class="strip-label-inner">Acne Scarring</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Face-Volume-1.png" alt="Face volume results">
+      <div class="strip-label-inner">Face Volume</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/FINE-LINE-WRINKLES-3.png" alt="Fine lines and wrinkles results">
+      <div class="strip-label-inner">Fine Lines</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Body-Contouring_1.png" alt="Body contouring results">
+      <div class="strip-label-inner">Body Contouring</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Pigmentation_1.png" alt="Pigmentation results">
+      <div class="strip-label-inner">Pigmentation</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/MORPHEUS_3.png" alt="Skin tightening and texture results">
+      <div class="strip-label-inner">Skin Tightening</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/MiniFxDouble-Chin-1.png" alt="Double chin results">
+      <div class="strip-label-inner">Double Chin</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/09/Skin-Concern_-Ageing-3.png" alt="Skin ageing results">
+      <div class="strip-label-inner">Skin Ageing</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Hydration_1.png" alt="Skin hydration results">
+      <div class="strip-label-inner">Hydration</div>
+    </div>
+    <!-- Set 2 - duplicate for seamless loop -->
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Acne-Scarring_1.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Acne Scarring</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Face-Volume-1.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Face Volume</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/FINE-LINE-WRINKLES-3.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Fine Lines</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Body-Contouring_1.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Body Contouring</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Pigmentation_1.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Pigmentation</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/MORPHEUS_3.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Skin Tightening</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/MiniFxDouble-Chin-1.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Double Chin</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/09/Skin-Concern_-Ageing-3.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Skin Ageing</div>
+    </div>
+    <div class="strip-label">
+      <img class="strip-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Hydration_1.png" alt="" aria-hidden="true">
+      <div class="strip-label-inner">Hydration</div>
     </div>
   </div>
 </div>
 
-<!-- 3 PATHWAYS -->
-<div class="pathways">
-  <div class="pathways-inner">
-    <div class="section-label">Where Do You Want to Start?</div>
-    <h2>Three ways in. All of them lead to amazing skin.</h2>
-    <div class="pathway-grid">
-      <div class="pathway-card">
-        <div class="pathway-icon">&#x1F50D;</div>
-        <h3>I'm Not Sure What I Need</h3>
-        <p>Take our free 2-minute skin assessment and get a personalised treatment recommendation based on your skin type, concerns, and goals. No pressure, no commitment.</p>
-        <a href="#" class="pathway-link">Take the Assessment &#x2192;</a>
-      </div>
-      <div class="pathway-card">
-        <div class="pathway-icon">&#x1F4AC;</div>
-        <h3>I Want Expert Guidance</h3>
-        <p>Book a consultation with our team. Tell us what's bothering you, and we'll create your personalised treatment plan. That's our job - you don't need to know the answer.</p>
-        <a href="#" class="pathway-link">Book a Consultation &#x2192;</a>
-      </div>
-      <div class="pathway-card">
-        <div class="pathway-icon">&#x2728;</div>
-        <h3>I Know What I Want</h3>
-        <p>Already know your treatment? Book directly into our calendar. Morpheus 8, IPL, HydraFacial, injectables - choose your treatment and pick a time that works.</p>
-        <a href="#" class="pathway-link">Book a Treatment &#x2192;</a>
-      </div>
+<!-- THREE CONCERNS - EDITORIAL -->
+<section class="concerns" aria-label="Skin concerns we treat">
+  <div class="concerns-header reveal">
+    <div class="concerns-header-text">
+      <div class="eyebrow">Where would you like to start?</div>
+      <h2 class="heading-xl heading-xl-light">
+        "I know something<br>
+        has <em>changed.</em><br>
+        I just want it fixed."
+      </h2>
     </div>
+    <p class="concerns-header-note">
+      Every concern you see here is something Jen has treated thousands of times. This isn't a treatment menu - it's a conversation starter.
+    </p>
   </div>
-</div>
 
-<!-- RESULTS STRIP -->
-<div class="results-strip">
-  <div class="results-inner">
-    <h2>Real Results. Real Clients. Real Transformations.</h2>
-    <p class="sub">These are actual results from our Gawler clinic. No filters. No editing. Expert treatment, full stop.</p>
-    <div class="ba-grid">
-      <div class="ba-card">
-        <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/MORPHEUS_3.png" alt="Morpheus 8 skin tightening and texture result" style="width:100%;aspect-ratio:1;object-fit:cover;display:block;">
-        <div class="ba-info">
-          <div class="ba-treatment">Morpheus 8</div>
-          <div class="ba-detail">3 sessions - skin tightening + texture</div>
-        </div>
-      </div>
-      <div class="ba-card">
-        <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Pigmentation_1.png" alt="Lumecca IPL pigmentation and redness result" style="width:100%;aspect-ratio:1;object-fit:cover;display:block;">
-        <div class="ba-info">
-          <div class="ba-treatment">Lumecca IPL</div>
-          <div class="ba-detail">2 sessions - pigmentation + redness</div>
-        </div>
-      </div>
-      <div class="ba-card">
-        <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Face-Volume-1.png" alt="Glass Skin Package - Morpheus, filler and anti-wrinkle result" style="width:100%;aspect-ratio:1;object-fit:cover;display:block;">
-        <div class="ba-info">
-          <div class="ba-treatment">Glass Skin Package</div>
-          <div class="ba-detail">Morpheus + filler + anti-wrinkle</div>
-        </div>
-      </div>
-      <div class="ba-card">
-        <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Body-Contouring_1.png" alt="Evolve X body contouring - stubborn fat and skin tightening result" style="width:100%;aspect-ratio:1;object-fit:cover;display:block;">
-        <div class="ba-info">
-          <div class="ba-treatment">Evolve X Body</div>
-          <div class="ba-detail">Stubborn fat + skin tightening</div>
-        </div>
+  <div class="concerns-grid">
+    <!-- LARGE - Acne/Texture -->
+    <div class="concern-card concern-card--large reveal">
+      <img class="concern-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Acne-Scarring_1.png" alt="Acne scarring and skin texture concern">
+      <div class="concern-overlay">
+        <div class="concern-number" aria-hidden="true">01</div>
+        <span class="concern-tag">Texture + Scarring</span>
+        <h3 class="concern-headline">"My skin is scarred and I can't seem to fix it on my own."</h3>
+        <p class="concern-body">
+          Acne scarring, uneven texture, enlarged pores - these respond beautifully to the right combination of energy-based treatments and clinical expertise. Jen builds plans that actually move the needle.
+        </p>
+        <a href="#" class="concern-link" aria-label="Learn about acne scarring and texture treatments">Start here</a>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- SKIN ASSESSMENT CTA -->
-<div class="assessment-cta">
-  <div class="assessment-inner">
-    <div class="section-label">Skin Assessment</div>
-    <h2>Not Sure What You Need? Start Here.</h2>
-    <p class="sub">Answer 7 quick questions and we'll match you with your ideal treatment plan. Personalised to your skin type, concerns, and goals.</p>
-    <div class="assessment-features">
-      <div class="af-item">
-        <div class="icon">&#x23F1;</div>
-        <div class="label">2 Minutes</div>
-      </div>
-      <div class="af-item">
-        <div class="icon">&#x1F4CB;</div>
-        <div class="label">7 Questions</div>
-      </div>
-      <div class="af-item">
-        <div class="icon">&#x1F48E;</div>
-        <div class="label">Personalised Plan</div>
+    <!-- SMALL - Ageing/Volume -->
+    <div class="concern-card concern-card--small reveal reveal-delay-1">
+      <img class="concern-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Face-Volume-1.png" alt="Face volume loss and ageing concern">
+      <div class="concern-overlay">
+        <div class="concern-number" aria-hidden="true">02</div>
+        <span class="concern-tag">Ageing + Volume</span>
+        <h3 class="concern-headline">"I'm losing definition. My face doesn't look like me anymore."</h3>
+        <p class="concern-body">
+          Volume loss, softening jawlines, hollowing under the eyes - the face changes quietly until one day it's undeniable. Jen restores, without overcorrecting.
+        </p>
+        <a href="#" class="concern-link" aria-label="Learn about ageing and volume treatments">Start here</a>
       </div>
     </div>
-    <a href="#" class="btn-primary">Start My Skin Assessment</a>
+
+    <!-- SMALL - Pigmentation/Tone -->
+    <div class="concern-card concern-card--small reveal reveal-delay-2">
+      <img class="concern-img" src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Pigmentation_1.png" alt="Pigmentation and skin tone concern">
+      <div class="concern-overlay">
+        <div class="concern-number" aria-hidden="true">03</div>
+        <span class="concern-tag">Pigmentation + Tone</span>
+        <h3 class="concern-headline">"My skin looks tired, pigmented and dull. Nothing seems to make a difference."</h3>
+        <p class="concern-body">
+          Sunspots, melasma, redness, overall greyness - pigmentation is complex and deeply personal. The right treatment plan changes everything, and it starts with a proper assessment.
+        </p>
+        <a href="#" class="concern-link" aria-label="Learn about pigmentation and skin tone treatments">Start here</a>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- JEN'S STORY -->
+<section class="jen-story" aria-label="About Jennifer Carly">
+  <div class="jen-story-inner">
+    <div class="jen-story-image reveal">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/jennifercarly-165.jpg" alt="Jennifer Carly RN - Aesthetic Medicine Practitioner">
+      <div class="jen-story-image-badge">Jennifer Bialek RN - 20+ Years</div>
+    </div>
+    <div class="jen-story-content reveal reveal-delay-1">
+      <div class="eyebrow">Meet Jen</div>
+      <h2 class="heading-xl heading-xl-dark">
+        She came to aesthetics<br>
+        from <em>oncology</em> and<br>
+        paediatric nursing.
+      </h2>
+      <div class="divider-gold"></div>
+      <p class="jen-story-body">
+        Most aesthetic practitioners come from beauty. Jen came from wards where attention to detail wasn't optional. Twenty years as a registered nurse - including intensive care, oncology, and paediatrics - before she brought that same clinical precision to aesthetic medicine.
+      </p>
+      <p class="jen-story-body">
+        What that means for you: she doesn't see a face to be improved. She sees a person, a whole history, and a treatment plan that actually fits your life and your biology.
+      </p>
+
+      <div class="jen-credentials">
+        <div class="jen-cred">
+          <div class="cred-check" aria-hidden="true">&#10003;</div>
+          <div class="cred-text"><strong>20+ years Registered Nursing</strong> - oncology, paediatrics, ICU</div>
+        </div>
+        <div class="jen-cred">
+          <div class="cred-check" aria-hidden="true">&#10003;</div>
+          <div class="cred-text"><strong>Aesthetic Business Awards 2026 Finalist</strong> - recognised nationally for clinical excellence</div>
+        </div>
+        <div class="jen-cred">
+          <div class="cred-check" aria-hidden="true">&#10003;</div>
+          <div class="cred-text"><strong>Multi-modality approach</strong> - combining energy, injectables and advanced skincare</div>
+        </div>
+        <div class="jen-cred">
+          <div class="cred-check" aria-hidden="true">&#10003;</div>
+          <div class="cred-text"><strong>Gawler SA clinic - established</strong> + <strong>Melbourne opening June 2026</strong></div>
+        </div>
+      </div>
+
+      <div class="jen-award-strip">
+        <div class="award-icon">&#9733;</div>
+        <div class="award-text">
+          <div class="award-title">Aesthetic Business Awards 2026 Finalist</div>
+          <div class="award-sub">Recognised for excellence in aesthetic medicine - nationally</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- TESTIMONIALS -->
-<div class="testimonials">
-  <div class="testimonials-inner">
-    <div class="section-label">What Our Clients Say</div>
-    <h2>The Proof is in the Results</h2>
-    <div class="test-grid">
-      <div class="test-card">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="test-quote">"Jen and her team are beyond amazing! They are honest, caring, and make you feel so comfortable. It's the only clinic I would ever go to for any treatment!"</div>
-        <div class="test-name">Verified Client</div>
+<section class="proof" aria-label="Client reviews">
+  <div class="proof-top reveal">
+    <div>
+      <div class="eyebrow">What clients say</div>
+      <h2 class="heading-xl heading-xl-light" style="margin-top:20px;">
+        The kind of care that<br>
+        makes people <em>come back.</em>
+      </h2>
+    </div>
+    <div class="proof-rating" aria-label="5 star rating">
+      <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="proof-score">5.0</div>
+      <div class="proof-count">Google Reviews</div>
+    </div>
+  </div>
+
+  <div class="reviews-layout">
+    <div class="review-card review-card--featured reveal">
+      <div class="review-mark" aria-hidden="true">"</div>
+      <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">
+        "Jen and her team are beyond amazing! They are honest, caring, and make you feel so comfortable. It's the only clinic I would ever go to for any treatment. I honestly couldn't recommend them highly enough!"
+      </p>
+      <div class="review-author">Verified Client</div>
+      <div class="review-source">Google Review</div>
+    </div>
+    <div class="review-card reveal reveal-delay-1">
+      <div class="review-mark" aria-hidden="true">"</div>
+      <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">
+        "The staff are amazing at what they do - very professional, very knowledgeable and skilled. They made me feel completely at ease from the moment I walked in."
+      </p>
+      <div class="review-author">Verified Client</div>
+      <div class="review-source">Google Review</div>
+    </div>
+    <div class="review-card reveal reveal-delay-2">
+      <div class="review-mark" aria-hidden="true">"</div>
+      <div class="review-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">
+        "She's warm and professional but has a great sense of humour too! She listened to what I wanted and gave me exactly that. I love my natural looking results."
+      </p>
+      <div class="review-author">Verified Client</div>
+      <div class="review-source">Google Review</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS MOSAIC -->
+<section class="results-mosaic" aria-label="Clinical results gallery">
+  <div class="results-header reveal">
+    <div>
+      <div class="eyebrow">Real results</div>
+      <h2 class="heading-xl heading-xl-light">
+        These are actual clients.<br>
+        <em>Actual outcomes.</em>
+      </h2>
+    </div>
+    <div class="results-header-right">
+      <p>
+        Every result shown here is from the Gawler clinic. No filters. No editing. Just what happens when clinical expertise meets the right treatment plan.
+      </p>
+      <a href="#" class="btn-gold">Book Your Consultation</a>
+    </div>
+  </div>
+
+  <div class="results-grid">
+    <div class="result-card reveal">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Acne-Scarring_1.png" alt="Acne scarring before and after">
+      <div class="result-card-label">
+        <div class="result-concern">Acne Scarring</div>
+        <div class="result-note">Texture + clarity</div>
       </div>
-      <div class="test-card">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="test-quote">"The staff are amazing at what they do, very professional, very knowledgeable and skilled. They made me feel completely at ease from the moment I walked in."</div>
-        <div class="test-name">Verified Client</div>
+    </div>
+    <div class="result-card reveal reveal-delay-1">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/09/Skin-Concern_-Ageing-3.png" alt="Skin ageing before and after">
+      <div class="result-card-label">
+        <div class="result-concern">Skin Ageing</div>
+        <div class="result-note">Lift + definition</div>
       </div>
-      <div class="test-card">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="test-quote">"She's warm and professional but has a great sense of humour too! She listened to what I wanted and gave me exactly that. I love my natural looking results."</div>
-        <div class="test-name">Verified Client</div>
+    </div>
+    <div class="result-card reveal reveal-delay-2">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Hydration_1.png" alt="Skin hydration before and after">
+      <div class="result-card-label">
+        <div class="result-concern">Hydration</div>
+        <div class="result-note">Glow + plumpness</div>
+      </div>
+    </div>
+    <div class="result-card reveal reveal-delay-3">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/MiniFxDouble-Chin-1.png" alt="Double chin before and after">
+      <div class="result-card-label">
+        <div class="result-concern">Double Chin</div>
+        <div class="result-note">Contour + reduction</div>
+      </div>
+    </div>
+    <div class="result-card result-card--wide reveal">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/One-Goal-One-Team.jpg" alt="Jennifer Carly clinic team">
+      <div class="result-card-label">
+        <div class="result-concern">The Jennifer Carly Team</div>
+        <div class="result-note">Gawler SA + Melbourne June 2026</div>
+      </div>
+    </div>
+    <div class="result-card reveal reveal-delay-1">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Pigmentation_1.png" alt="Pigmentation before and after">
+      <div class="result-card-label">
+        <div class="result-concern">Pigmentation</div>
+        <div class="result-note">Tone + clarity</div>
+      </div>
+    </div>
+    <div class="result-card reveal reveal-delay-2">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/FINE-LINE-WRINKLES-3.png" alt="Fine lines and wrinkles before and after">
+      <div class="result-card-label">
+        <div class="result-concern">Fine Lines</div>
+        <div class="result-note">Smoothing + softening</div>
+      </div>
+    </div>
+    <div class="result-card reveal reveal-delay-3">
+      <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/Body-Contouring_1.png" alt="Body contouring before and after">
+      <div class="result-card-label">
+        <div class="result-concern">Body Contouring</div>
+        <div class="result-note">Shape + reduction</div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- AWARD STRIP -->
-<div class="award-strip">
-  <div class="badge">&#x1F3C6;</div>
-  <div>
-    <p>Aesthetic Business Awards 2026 Finalist</p>
-    <div class="sub">Recognised for excellence in aesthetic medicine</div>
+<!-- ASSESSMENT CTA -->
+<section class="assessment" aria-label="Skin assessment">
+  <div class="assessment-inner">
+    <div class="eyebrow reveal">Start Here</div>
+    <h2 class="heading-xl reveal reveal-delay-1">
+      Not sure what your<br>
+      skin <em>actually needs?</em>
+    </h2>
+    <p class="assessment-body reveal reveal-delay-2">
+      Take our 60-second skin assessment and receive a personalised treatment direction based on your skin type, main concerns and goals. No obligation, no pressure - just clarity.
+    </p>
+    <div class="assessment-features reveal reveal-delay-2">
+      <div class="af-item">
+        <div class="af-num">60</div>
+        <div class="af-label">Seconds</div>
+      </div>
+      <div class="af-divider" aria-hidden="true"></div>
+      <div class="af-item">
+        <div class="af-num">7</div>
+        <div class="af-label">Questions</div>
+      </div>
+      <div class="af-divider" aria-hidden="true"></div>
+      <div class="af-item">
+        <div class="af-num">1</div>
+        <div class="af-label">Clear Plan</div>
+      </div>
+    </div>
+    <a href="assessment.html" class="btn-gold reveal reveal-delay-3" aria-label="Take your 60 second skin assessment">Take My Skin Assessment</a>
   </div>
-</div>
+</section>
 
-<!-- FOOTER CTA -->
-<div class="footer-cta">
-  <h2>Your Skin Transformation Starts Here</h2>
-  <p class="sub">Book your consultation today and let's create your personalised plan.</p>
-  <a href="#" class="btn-primary">Book Your Consultation</a>
-</div>
+<!-- BOOKING CTA -->
+<section class="booking-cta" aria-label="Book a consultation">
+  <div class="booking-cta-bg" aria-hidden="true"></div>
+  <div class="booking-cta-overlay" aria-hidden="true"></div>
+  <div class="booking-cta-inner">
+    <div>
+      <div class="eyebrow reveal">Your skin. Your clinic.</div>
+      <h2 class="heading-xl reveal reveal-delay-1">
+        Ready to stop hoping<br>
+        something changes<br>
+        and <em>make it happen?</em>
+      </h2>
+      <p class="booking-cta-body reveal reveal-delay-2">
+        A consultation with Jen isn't a sales pitch. It's a proper clinical conversation - your skin history, your concerns, what you want and what's actually achievable. She'll tell you the truth, build a plan, and let you decide.
+      </p>
+      <a href="#" class="btn-gold reveal reveal-delay-3">Book Your Consultation</a>
+    </div>
+    <div class="booking-right reveal reveal-delay-2">
+      <div class="contact-block">
+        <div class="contact-block-label">Gawler Clinic</div>
+        <div class="contact-block-value">
+          Level 1, 1 Commercial Lane<br>
+          Gawler SA 5118
+        </div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block-label">Melbourne - Opening June 2026</div>
+        <div class="contact-block-value">
+          Enquire now to be notified<br>
+          when bookings open
+        </div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-block-label">Website</div>
+        <div class="contact-block-value">
+          jennifercarlyaestheticmedicine.com.au
+        </div>
+      </div>
+      <div class="social-line">
+        Follow along on Instagram
+        <a href="https://instagram.com/jennifercarlyaestheticmedicine" target="_blank" rel="noopener noreferrer" aria-label="Jennifer Carly Aesthetic Medicine Instagram">@jennifercarlyaestheticmedicine</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="logo">Jennifer Carly Aesthetic Medicine</div>
-  <div class="details">Level 1, 1 Commercial Lane, Gawler SA 5118</div>
-  <div class="details">+61 415 823 112</div>
-  <div class="details" style="margin-top:8px; font-size:0.7rem;">Mon-Wed 10am-6pm | Thu-Fri 10am-8pm | Sat 10am-3pm</div>
+  <a href="#" class="footer-logo" aria-label="Jennifer Carly Aesthetic Medicine home">
+    <img src="https://jennifercarlyaestheticmedicine.com.au/wp-content/uploads/2025/08/JC-Logo.png" alt="Jennifer Carly Aesthetic Medicine">
+  </a>
+  <div class="footer-center">
+    <div class="footer-address">
+      <strong>Jennifer Carly Aesthetic Medicine</strong>
+      Level 1, 1 Commercial Lane, Gawler SA 5118<br>
+      Melbourne Clinic Opening June 2026
+    </div>
+  </div>
+  <div class="footer-right">
+    <p>Aesthetic Business Awards 2026 Finalist</p>
+    <a href="https://jennifercarlyaestheticmedicine.com.au" target="_blank" rel="noopener noreferrer">jennifercarlyaestheticmedicine.com.au</a>
+  </div>
 </footer>
+
+<script>
+  // === NAV SCROLL ANCHOR ===
+  (function() {
+    var nav = document.getElementById('main-nav');
+    var bannerHeight = document.querySelector('.demo-banner').offsetHeight;
+
+    function updateNav() {
+      if (window.scrollY > bannerHeight + 10) {
+        nav.classList.add('anchored');
+      } else {
+        nav.classList.remove('anchored');
+      }
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  })();
+
+  // === SCROLL REVEAL ===
+  (function() {
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    els.forEach(function(el) { observer.observe(el); });
+  })();
+</script>
 
 </body>
 </html>
